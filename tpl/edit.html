@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+--Copyright(c)2016 All rights reserved.
+--@Licenced  http://www.w3.org
+--@Author  liutian<1538731090@qq.com> liutian_jiayi
+--@Create on 2016-6-14 9:13:44
+--@Version 1.0
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<a href="index.php">返回</a>
+		<form method='post' action='index.php'>
+			<input type='hidden' name='action' value='update' />
+			<input type='hidden' name='id' value="<?php echo $row['id']; ?>" />
+			<p>name:<input type='text' name='name' value="<?php echo $row['name']; ?>" /></p>
+			<input type="submit" value="修改" />
+		</form>
+	</body>
+</html>

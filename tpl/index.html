@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+--Copyright(c)2016 All rights reserved.
+--@Licenced  http://www.w3.org
+--@Author  liutian<1538731090@qq.com> liutian_jiayi
+--@Create on 2016-6-14 8:49:27
+--@Version 1.0
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h4>tilte</h4>
+		<a href="index.php?action=add">添加</a>
+		
+		<table border='1'>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>OPTION</th>
+			</tr>
+			<?php
+			foreach ($rows as $row) {
+				echo "<tr>";
+					echo "<td>{$row['id']}</td>";
+					echo "<td>{$row['name']}</td>";
+					echo "<td><a href='index.php?action=delete&id={$row['id']}'>删除</a> <a href='index.php?action=edit&id={$row['id']}'>修改</a></td>";
+				echo "</tr>";
+			}
+			?>
+		</table>
+	</body>
+</html>
